@@ -3,6 +3,7 @@
   makeWrapper,
   browsers,
   npmDepsHash,
+  browserProgram,
 }:
 buildNpmPackage {
   pname = "playwright-server";
@@ -26,10 +27,10 @@ buildNpmPackage {
   ];
 
   postInstall = ''
-    browser="$(find -L '${browsers}' -name chrome -type f)"
+    browser="$(find -L '${browsers}' -name ${browserProgram} -type f)"
 
     wrapProgram "$out/bin/playwright-server" \
-      --add-flags "--browser-executable ''${browser:?Missing chrome browser}"
+      --add-flags "--browser-executable ''${browser:?Missing ${browserProgram} browser}"
   '';
 
   meta = {

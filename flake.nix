@@ -9,12 +9,15 @@
       inherit (nixpkgs) lib;
 
       npmDepsHash = lib.trim (builtins.readFile ./npm-hash.txt);
+
+      browserProgramForPkgs = pkgs: if pkgs.stdenv.targetPlatform.isLinux then "chrome" else "Chromium";
     in
     {
       packages = eachSystem (pkgs: rec {
         default = playwright-server;
         playwright-server = pkgs.callPackage ./. {
           browsers = pkgs.callPackage ./browsers.nix { };
+          browserProgram = browserProgramForPkgs pkgs;
           inherit npmDepsHash;
         };
         mcp-server = pkgs.callPackage ./mcp-server.nix {
@@ -41,7 +44,7 @@
 
             shellHook = ''
               # Pass the browser path for running the npm script
-              export PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH="$(find -L '${browsers}' -name chrome -type f)"
+              export PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH="$(find -L '${browsers}' -name ${browserProgramForPkgs pkgs} -type f)"
             '';
           };
 
