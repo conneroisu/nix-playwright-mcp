@@ -8,9 +8,10 @@ Nix flake, so you can run it for
 the Playwright MCP server in Nix, to prevent the error of [Playwright version
 mismatch](https://github.com/microsoft/playwright-mcp/issues/7).
 ## Rationale
-By early 2025, the Model Context Protocol (MCP) is a hot topic in AI. Microsoft
-has released [playwright-mcp](https://github.com/microsoft/playwright-mcp),
-which seems to be quickly growing in popularity.
+By early 2025, the Model Context Protocol (MCP) is an emerging topic among AI
+users. Microsoft has released
+[playwright-mcp](https://github.com/microsoft/playwright-mcp), which seems to be
+growing in popularity.
 
 Unfortunately, Playwright + Playwright MCP is a little hard to set up on NixOS
 for the following reasons:
