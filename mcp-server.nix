@@ -6,7 +6,7 @@
 }:
 buildNpmPackage {
   pname = "mcp-server-playwright";
-  version = "n/a";
+  version = "unknown";
 
   src = ./.;
   inherit npmDepsHash;
