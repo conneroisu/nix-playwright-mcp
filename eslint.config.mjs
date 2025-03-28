@@ -5,6 +5,9 @@ export default antfu({
     indent: 2,
     quotes: 'single',
   },
+  ignores: [
+    '.github',
+  ],
   rules: {
     'no-console': 'off',
   },

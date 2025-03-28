@@ -1,0 +1,40 @@
+name: Lint JavaScript code
+
+on:
+  pull_request:
+    paths-ignore:
+      - README.*
+
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - README.*
+
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  npm:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ["20", "22"]
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run eslint
+        run: npm run lint
