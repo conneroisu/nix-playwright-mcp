@@ -4,6 +4,8 @@
   browsers,
   npmDepsHash,
   browserProgram,
+  lib,
+  nodejs,
 }:
 buildNpmPackage {
   pname = "playwright-server";
@@ -34,5 +36,9 @@ buildNpmPackage {
   '';
 
   meta = {
+    description = "Framework for Web Testing and Automation";
+    homepage = "https://playwright.dev";
+    license = lib.licenses.asl20;
+    inherit (nodejs.meta) platforms;
   };
 }
