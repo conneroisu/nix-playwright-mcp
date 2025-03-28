@@ -17,7 +17,10 @@ buildNpmPackage {
   dontNpmBuild = true;
 
   postInstall = ''
-    install -t "$out/bin" node_modules/.bin/mcp-server-playwright
+    bin="$out/lib/node_modules/nix-playwright-server/node_modules/.bin"
+
+    makeWrapper "$bin/mcp-server-playwright" $out/bin/mcp-server-playwright \
+      --chdir "$bin"
   '';
 
   meta = {
