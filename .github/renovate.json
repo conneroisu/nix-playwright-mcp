@@ -8,6 +8,7 @@
     "automation",
     "dependencies"
   ],
+  "ignoreDeps": ["playwright-core"],
   "packageRules": [
     {
       "matchUpdateTypes": [
