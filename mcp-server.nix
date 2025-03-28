@@ -1,6 +1,8 @@
 {
   buildNpmPackage,
   npmDepsHash,
+  nodejs,
+  lib,
 }:
 buildNpmPackage {
   pname = "mcp-server-playwright";
@@ -17,4 +19,11 @@ buildNpmPackage {
   postInstall = ''
     install -t "$out/bin" node_modules/.bin/mcp-server-playwright
   '';
+
+  meta = {
+    description = "Playwright Tools for MCP";
+    homepage = "https://github.com/microsoft/playwright-mcp";
+    license = lib.licenses.asl20;
+    inherit (nodejs.meta) platforms;
+  };
 }
