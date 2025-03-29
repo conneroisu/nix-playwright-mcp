@@ -28,7 +28,7 @@ issues will be resolved!
 ## Features
 - Intuitive and easy to use on NixOS.
 - Use the official NixOS package for Playwright browser executables, i.e.
-  `playwright-driver-browsers`.
+  `playwright-driver.browsers`.
 - Include only a single browser executable to minimize the download time.
   Currently, only chromium is supported.
 - Also package the MCP server to prevent version issues.
