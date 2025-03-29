@@ -16,7 +16,7 @@ growing in popularity.
 Unfortunately, Playwright + Playwright MCP is a little hard to set up on NixOS
 for the following reasons:
 
-- [Playwright itself is already confusing on
+- [Playwright itself is already hard to set up on
   NixOS](https://discourse.nixos.org/t/running-playwright-tests/25655), because
   Playwright looks for a browser executable from a specific location on the
   Filesystem Hierarchy Standard (FHS), which NixOS doesn't adhere to.
