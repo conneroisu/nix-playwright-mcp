@@ -22,6 +22,11 @@ const argv = yargs(hideBin(process.argv))
     type: 'boolean',
     default: false,
   })
+  .option('sandbox', {
+    description: 'Enable sandboxing of the Chromium session',
+    type: 'boolean',
+    default: true,
+  })
   .option('browser-executable', {
     description: 'Path to browser executable',
     type: 'string',
@@ -38,6 +43,7 @@ async function main() {
     const browserServer = await chromium.launchServer({
       channel: 'chrome',
       executablePath: argv.browserExecutable,
+      chromiumSandbox: argv.sandbox,
       headless: argv.headless,
       handleSIGINT: true,
       host: argv.host,
