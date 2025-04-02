@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@playwright/mcp": "^0.0.9",
-    "playwright-core": "^1.52.0-alpha-1743011787000",
+    "playwright-core": "^1.52.0-alpha-1743163434000",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
