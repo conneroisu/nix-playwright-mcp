@@ -5,23 +5,7 @@
   "author": "Akira Komamura",
   "license": "MIT",
   "keywords": [],
-  "bin": {
-    "playwright-server": "./index.mjs"
-  },
-  "scripts": {
-    "playwright-server": "node index.mjs",
-    "mcp": "mcp-server-playwright",
-    "lint": "eslint .",
-    "lint-fix": "eslint --fix ."
-  },
   "dependencies": {
-    "@playwright/mcp": "^0.0.9",
-    "playwright-core": "^1.52.0-alpha-1743163434000",
-    "yargs": "^17.7.2"
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "^4.11.0",
-    "@stylistic/eslint-plugin": "^4.2.0",
-    "eslint": "^9.23.0"
+    "@playwright/mcp": "^0.0.9"
   }
 }
