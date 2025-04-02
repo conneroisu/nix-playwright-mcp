@@ -1,6 +1,6 @@
 # A Nix Flake for Playwright MCP
 After a bunch of updates and improvements in the Playwright MCP itself, most
-part of this project has become useless! This repository only provides a
+part of this project became useless! This repository only provides a
 Nix-wrapped version of the Playwright MCP server, with the browser executable
 set to Chromium from Nixpkgs.
 ## Usage
