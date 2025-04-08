@@ -1,8 +1,12 @@
 # A Nix Flake for Playwright MCP
-After a bunch of updates and improvements in the Playwright MCP itself, most
-part of this project became useless! This repository only provides a
-Nix-wrapped version of the Playwright MCP server, with the browser executable
-set to Chromium from Nixpkgs.
+**Deprecated**: After a bunch of updates and improvements in the Playwright MCP
+itself, most part of this project became useless! Now, this repository only
+provides a Nix-wrapped version of the Playwright MCP server, with the browser
+executable set to Chromium from Nixpkgs.
+
+A better alternative might be
+[mcp-server-nix](https://github.com/natsukium/mcp-servers-nix), which is
+maintained by one of the current maintainers of Nixpkgs.
 ## Usage
 Run the server:
 
