@@ -4,9 +4,11 @@ itself, most part of this project became useless! Now, this repository only
 provides a Nix-wrapped version of the Playwright MCP server, with the browser
 executable set to Chromium from Nixpkgs.
 
-A better alternative might be
-[mcp-server-nix](https://github.com/natsukium/mcp-servers-nix), which is
-maintained by one of the current maintainers of Nixpkgs.
+Instead, I would recommend you consider one of the following alternatives:
+
+- https://github.com/natsukium/mcp-servers-nix
+- https://github.com/aloshy-ai/nix-mcp-servers
+- https://github.com/cameronfyfe/nix-mcp-servers
 ## Usage
 Run the server:
 
