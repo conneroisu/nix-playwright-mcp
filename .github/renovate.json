@@ -11,6 +11,15 @@
   "ignoreDeps": ["playwright-core"],
   "packageRules": [
     {
+      "matchManagers": [
+        "nix"
+      ],
+      "groupName": "nix",
+      "extends": [
+        "schedule:weekly"
+      ]
+    },
+    {
       "matchUpdateTypes": [
         "lockFileMaintenance"
       ],
