@@ -1,9 +1,11 @@
 # A Nix Flake for Playwright MCP
-**Deprecated**: Now Playwright MCP starts a browser instance within itself, you
-can simply run the MCP server without a complex workaround which was previously
-implemented in this repository. This repository now only provides a Nix-wrapped
-version of the Playwright MCP server, with the browser executable set to
-Chromium from Nixpkgs.
+**Deprecated**: This repository was a workaround for complex usage in the former
+Playwright MCP server. This is no longer necessary in the current version of
+Playwright MCP, which can be run simply using `npx`.
+
+This repository now only provides a Nix-wrapped version of the Playwright MCP
+server, with the browser executable set to Chromium from Nixpkgs. I am still
+maintaining this repository for personal use, but it doesn't offer much benefit.
 
 For a comprehensive framework for running MCP servers on NixOS, I would
 recommend the following options:
