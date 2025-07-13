@@ -20,6 +20,12 @@
       });
 
       devShells = eachSystem (pkgs: {
+        default = pkgs.mkShell {
+          packages = [
+            pkgs.nixd
+            pkgs.alejandra
+          ];
+        };
         # A Nix shell for running the update script.
         #
         # Example: `nix develop .#ci -c ./update.bash`
