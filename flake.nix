@@ -24,6 +24,7 @@
           packages = [
             pkgs.nixd
             pkgs.alejandra
+            pkgs.just
           ];
         };
         # A Nix shell for running the update script.
