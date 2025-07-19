@@ -40,7 +40,7 @@ in
 
       makeWrapper "$bin/mcp-server-playwright" $out/bin/mcp-server-playwright \
         --chdir "$bin" \
-        --add-flags "--executable-path '$executable' --isolated --vision"
+        --add-flags "--executable-path '$executable' --isolated --caps=vision"
     '';
 
     meta = {
