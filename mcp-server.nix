@@ -16,7 +16,7 @@
       playwright-driver.browsers.override {
         withFirefox = false;
         withWebkit = false;
-        withFfmpeg = false;
+        withFfmpeg = true;
         # fontconfig_file = { fontDirectories = []; };
       }
     else playwright-driver.browsers;
