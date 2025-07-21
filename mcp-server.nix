@@ -43,6 +43,7 @@ in
       # Get Random Storage State in ./logs/{uuidlike}.json
       uuid=$(cat /proc/sys/kernel/random/uuid)
       SESSION_STORAGE_STATE_PATH="logs/$uuid.json"
+      touch "$SESSION_STORAGE_STATE_PATH"
 
       makeWrapper "$bin/mcp-server-playwright" $out/bin/mcp-server-playwright \
         --chdir "$bin" \
